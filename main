@@ -1,0 +1,250 @@
+int led1= 15;
+int led2 = 2; 
+int led3= 4;
+int led4= 5;
+int led5 = 18;
+int led6 = 19;
+int led7 = 21;
+int led8= 22;
+int led9 = 23;
+int led10= 25;
+int led11 = 33;
+int led12 = 32;
+int ledPins[] = {led1, led2, led3, led4, led5, led6, led7, led8, led9, led10, led11, led12};
+int numLeds = sizeof(ledPins)/sizeof(int);
+int delayTime = 100; // in milliseconds
+
+void setup() {
+  // initialize digital pins as outputs
+  for (int i=0; i<numLeds; i++) {
+    pinMode(ledPins[i], OUTPUT);
+  }
+}
+
+void loop() {
+
+
+ for (int i = 0; i < 5; i++) {
+  digitalWrite(led1, HIGH);
+  digitalWrite(led2, HIGH);
+  digitalWrite(led3, HIGH);
+  digitalWrite(led4, HIGH);
+  digitalWrite(led5, HIGH);
+  digitalWrite(led6, HIGH);
+  digitalWrite(led7, HIGH);
+  digitalWrite(led8, HIGH);
+  digitalWrite(led9, HIGH);
+  digitalWrite(led10, HIGH);
+  digitalWrite(led11, HIGH);
+  digitalWrite(led12, HIGH);
+  delay(100);
+  digitalWrite(led1, LOW);
+  digitalWrite(led2, LOW);
+  digitalWrite(led3, LOW);
+  digitalWrite(led4, LOW);
+  digitalWrite(led5, LOW);
+  digitalWrite(led6, LOW);
+  digitalWrite(led7, LOW);
+  digitalWrite(led8, LOW);
+  digitalWrite(led9, LOW);
+  digitalWrite(led10, LOW);
+  digitalWrite(led11, LOW);
+  digitalWrite(led12, LOW);
+  delay(100);
+}
+  for (int i = 0; i < 2; i++) {
+  digitalWrite(led1, HIGH);
+  digitalWrite(led12, HIGH);
+  delay(50);
+  digitalWrite(led2, HIGH);
+  digitalWrite(led11, HIGH);
+    delay(50);
+  digitalWrite(led3, HIGH);
+  digitalWrite(led10, HIGH);
+    delay(50);
+  digitalWrite(led4, HIGH);
+  digitalWrite(led9, HIGH);
+    delay(50);
+  digitalWrite(led5, HIGH);
+  digitalWrite(led8, HIGH);
+    delay(50);
+  digitalWrite(led6, HIGH);
+  digitalWrite(led7, HIGH);
+  delay(100);
+  digitalWrite(led7, LOW);
+  digitalWrite(led6, LOW);
+      delay(50);
+  digitalWrite(led8, LOW);
+  digitalWrite(led5, LOW);
+      delay(50);
+  digitalWrite(led9, LOW);
+  digitalWrite(led4, LOW);
+      delay(50);
+  digitalWrite(led10, LOW);
+  digitalWrite(led3, LOW);
+      delay(50);
+  digitalWrite(led11, LOW);
+  digitalWrite(led2, LOW);
+      delay(50);
+  digitalWrite(led12, LOW);
+  digitalWrite(led1, LOW);
+  delay(100);
+}
+// here
+ for (int i = 0; i < 4; i++) {
+  digitalWrite(led1, HIGH);
+  digitalWrite(led2, HIGH);
+  digitalWrite(led3, HIGH);
+  digitalWrite(led4, HIGH);
+  digitalWrite(led5, HIGH);
+  digitalWrite(led6, HIGH);
+  delay(200);
+  digitalWrite(led7, HIGH);
+  digitalWrite(led8, HIGH);
+  digitalWrite(led9, HIGH);
+  digitalWrite(led10, HIGH);
+  digitalWrite(led11, HIGH);
+  digitalWrite(led12, HIGH);
+  delay(200);
+  digitalWrite(led1, LOW);
+  digitalWrite(led2, LOW);
+  digitalWrite(led3, LOW);
+  digitalWrite(led4, LOW);
+  digitalWrite(led5, LOW);
+  digitalWrite(led6, LOW);
+    delay(200);
+  digitalWrite(led7, LOW);
+  digitalWrite(led8, LOW);
+  digitalWrite(led9, LOW);
+  digitalWrite(led10, LOW);
+  digitalWrite(led11, LOW);
+  digitalWrite(led12, LOW);
+  delay(200);
+}
+ for (int i = 0; i < 6; i++) {
+  digitalWrite(led1, HIGH);
+  digitalWrite(led2, HIGH);
+  digitalWrite(led3, HIGH);
+  digitalWrite(led4, HIGH);
+  digitalWrite(led5, HIGH);
+  digitalWrite(led6, HIGH);
+  delay(60);
+  digitalWrite(led7, HIGH);
+  digitalWrite(led8, HIGH);
+  digitalWrite(led9, HIGH);
+  digitalWrite(led10, HIGH);
+  digitalWrite(led11, HIGH);
+  digitalWrite(led12, HIGH);
+  delay(60);
+  digitalWrite(led1, LOW);
+  digitalWrite(led2, LOW);
+  digitalWrite(led3, LOW);
+  digitalWrite(led4, LOW);
+  digitalWrite(led5, LOW);
+  digitalWrite(led6, LOW);
+    delay(60);
+  digitalWrite(led7, LOW);
+  digitalWrite(led8, LOW);
+  digitalWrite(led9, LOW);
+  digitalWrite(led10, LOW);
+  digitalWrite(led11, LOW);
+  digitalWrite(led12, LOW);
+  delay(60);
+}
+
+//here
+
+
+
+  for (int i = 0; i < 3; i++) {
+    digitalWrite(led1, HIGH);
+    digitalWrite(led3, HIGH);
+    digitalWrite(led5, HIGH);
+    delay(50);
+    digitalWrite(led1, LOW);
+    digitalWrite(led3, LOW);
+    digitalWrite(led5, LOW);
+    delay(50);
+    digitalWrite(led2, HIGH);
+    digitalWrite(led4, HIGH);
+    digitalWrite(led6, HIGH);
+    delay(50);
+    digitalWrite(led2, LOW);
+    digitalWrite(led4, LOW);
+    digitalWrite(led6, LOW);
+    delay(50);
+    digitalWrite(led7, HIGH);
+    digitalWrite(led9, HIGH);
+    digitalWrite(led11, HIGH);
+    delay(50);
+    digitalWrite(led7, LOW);
+    digitalWrite(led9, LOW);
+    digitalWrite(led11, LOW);
+    delay(50);
+    digitalWrite(led8, HIGH);
+    digitalWrite(led10, HIGH);
+    digitalWrite(led12, HIGH);
+    delay(50);
+    digitalWrite(led8, LOW);
+    digitalWrite(led10, LOW);
+    digitalWrite(led12, LOW);
+    delay(50);
+  
+  delay(100); // pause between flashing sequences
+}
+
+ 
+  // loop the running effect
+  for (int i=0; i<numLeds; i++) {
+    digitalWrite(ledPins[i], HIGH); // turn on the current LED
+    delay(30); // wait for a short period of time
+    digitalWrite(ledPins[i], LOW); // turn off the current LED
+    // turn on the next LED while turning off the previous LED
+    if (i < numLeds-1) {
+      digitalWrite(ledPins[i+1], HIGH);
+      delay(100);
+      digitalWrite(ledPins[i+1], LOW);
+    } else {
+      digitalWrite(ledPins[0], HIGH); // start over with the first LED
+      delay(50);
+      digitalWrite(ledPins[0], LOW);
+    }
+  }
+digitalWrite(led12, HIGH);
+delay(40);
+digitalWrite(led12, LOW);
+digitalWrite(led11, HIGH);
+delay(40);
+digitalWrite(led11, LOW);
+digitalWrite(led10, HIGH);
+delay(40);
+digitalWrite(led10, LOW);
+digitalWrite(led9, HIGH);
+delay(40);
+digitalWrite(led9, LOW);
+digitalWrite(led8, HIGH);
+delay(40);
+digitalWrite(led8, LOW);
+digitalWrite(led7, HIGH);
+delay(40);
+digitalWrite(led7, LOW);
+digitalWrite(led6, HIGH);
+delay(40);
+digitalWrite(led6, LOW);
+digitalWrite(led5, HIGH);
+delay(40);
+digitalWrite(led5, LOW);
+digitalWrite(led4, HIGH);
+delay(40);
+digitalWrite(led4, LOW);
+digitalWrite(led3, HIGH);
+delay(40);
+digitalWrite(led3, LOW);
+digitalWrite(led2, HIGH);
+delay(40);
+digitalWrite(led2, LOW);
+digitalWrite(led1, HIGH);
+delay(40);
+digitalWrite(led1, LOW);
+delay(40);
+}
